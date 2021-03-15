@@ -6,10 +6,14 @@
 //
 
 import UIKit
+//import Swarmin;
+import SwarminFramework;
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        let swarminControl = CoreWrapper();
+        CoreWrapper.runSwarminNode("test");
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

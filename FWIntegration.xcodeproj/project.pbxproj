@@ -13,7 +13,24 @@
 		2C303B4D25F9D9D500BFF7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C303B4B25F9D9D500BFF7CC /* Main.storyboard */; };
 		2C303B4F25F9D9DB00BFF7CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C303B4E25F9D9DB00BFF7CC /* Assets.xcassets */; };
 		2C303B5225F9D9DB00BFF7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C303B5025F9D9DB00BFF7CC /* LaunchScreen.storyboard */; };
+		2C303B6525F9DD0500BFF7CC /* SwarminFramework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C303B6425F9DD0500BFF7CC /* SwarminFramework */; };
+		2C303B6725F9DD1D00BFF7CC /* SwarminFramework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 2C303B6425F9DD0500BFF7CC /* SwarminFramework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2C303B6B25F9DE1F00BFF7CC /* SwarminFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C303B6A25F9DE1F00BFF7CC /* SwarminFramework.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C303B6825F9DD1E00BFF7CC /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C303B6725F9DD1D00BFF7CC /* SwarminFramework in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C303B4225F9D9D500BFF7CC /* FWIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +41,8 @@
 		2C303B4E25F9D9DB00BFF7CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C303B5125F9D9DB00BFF7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C303B5325F9D9DB00BFF7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C303B6425F9DD0500BFF7CC /* SwarminFramework */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = SwarminFramework; sourceTree = "<group>"; };
+		2C303B6A25F9DE1F00BFF7CC /* SwarminFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwarminFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C303B6525F9DD0500BFF7CC /* SwarminFramework in Frameworks */,
+				2C303B6B25F9DE1F00BFF7CC /* SwarminFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 		2C303B3925F9D9D500BFF7CC = {
 			isa = PBXGroup;
 			children = (
+				2C303B6A25F9DE1F00BFF7CC /* SwarminFramework.framework */,
+				2C303B6425F9DD0500BFF7CC /* SwarminFramework */,
 				2C303B4425F9D9D500BFF7CC /* FWIntegration */,
 				2C303B4325F9D9D500BFF7CC /* Products */,
 			);
@@ -69,14 +92,26 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2C303B6125F9DCBD00BFF7CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		2C303B4125F9D9D500BFF7CC /* FWIntegration */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C303B5625F9D9DB00BFF7CC /* Build configuration list for PBXNativeTarget "FWIntegration" */;
 			buildPhases = (
+				2C303B6125F9DCBD00BFF7CC /* Headers */,
 				2C303B3E25F9D9D500BFF7CC /* Sources */,
 				2C303B3F25F9D9D500BFF7CC /* Frameworks */,
 				2C303B4025F9D9D500BFF7CC /* Resources */,
+				2C303B6825F9DD1E00BFF7CC /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -288,10 +323,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D2GN79N658;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FWIntegration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swarmin.FWIntegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,10 +350,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D2GN79N658;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FWIntegration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swarmin.FWIntegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";

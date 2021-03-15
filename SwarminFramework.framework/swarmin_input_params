@@ -1,0 +1,15 @@
+SWARMIN_ROOT_DIR_NAME /Users/manoj/Documents/swarmin/swarmin/test/save_dir
+SWARMIN_NUM_CPUS 1
+SWARMIN_NUM_THREADS_PER_CPU 16
+SWARMIN_PYTHON_FILE_NAME chsi_model_rw
+SWARMIN_PYTHON_FUNCTION_NAME modelTrainAndPredict
+SWARMIN_DATA_FILE_EXT csv
+SWARMIN_CONTROLLER_URL http://api.swarmin.ai/swarmin-controller
+SWARMIN_SEND_MODEL_TO_CONTROLLER_URL http://api.swarmin.ai/swarmin-controller/sendModelToController
+SWARMIN_POLL_MODEL_PROCESSED_MESSAGE_URL http://api.swarmin.ai/swarmin-controller/pollModelProcessedMessage
+SWARMIN_POLL_LATEST_VERIFIED_MODEL_URL http://api.swarmin.ai/swarmin-controller/pollLatestVerifiedModel
+SWARMIN_REGISTER_MODEL_NODE_URL http://api.swarmin.ai/swarmin-controller/registerModelNode
+SWARMIN_ML_ENGINE tf
+SWARMIN_ADD_LOG_MESSAGE_URL http://api.swarmin.ai/logger/addLogMessage
+SWARMIN_LOG_TO_SERVER 0
+SWARMIN_EXPERIMENT_ID sample

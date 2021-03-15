@@ -1,0 +1,6 @@
+framework module SwarminFramework {
+  umbrella header "SwarminFramework.h"
+
+  export *
+  module * { export * }
+}
